@@ -172,7 +172,7 @@ export default {
   					opacity: '1'
   				}
   			},
-  			'float': {
+  			float: {
   				'0%, 100%': {
   					transform: 'translateY(0)'
   				},
@@ -200,7 +200,7 @@ export default {
   			'slide-in-left': 'slide-in-left 0.6s ease-out forwards',
   			'scale-in': 'scale-in 0.5s ease-out forwards',
   			'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
-  			'float': 'float 6s ease-in-out infinite',
+  			float: 'float 6s ease-in-out infinite',
   			'gradient-shift': 'gradient-shift 8s ease infinite'
   		},
   		backgroundImage: {
