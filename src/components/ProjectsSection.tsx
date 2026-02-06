@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, BarChart3, Bot, Database, Eye } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BarChart3, Bot, Database, Eye } from 'lucide-react';
 import { Button } from './ui/button';
-
 const projects = [
   {
+    id: 'logs-observability-platform',
     title: 'No-code PaaS – Logs & Observability Platform',
     description:
       'Centralized system for application, API, mobile & DB logs with no-code workflows for debugging, monitoring, and alerting.',
@@ -15,6 +16,7 @@ const projects = [
     gradient: 'from-primary to-secondary',
   },
   {
+    id: 'iems',
     title: 'Integrated Excise Management System (IEMS)',
     description:
       'Comprehensive system delivering 300+ operational & analytical reports with predictive models for revenue, sales, and forecasting.',
@@ -24,6 +26,7 @@ const projects = [
     gradient: 'from-secondary to-accent',
   },
   {
+    id: 'cx-automation',
     title: 'CX Automation Platform',
     description:
       'Built customer experience automation platform enabling rapid chatbot deployment with intelligent conversation flows.',
@@ -33,6 +36,7 @@ const projects = [
     gradient: 'from-accent to-primary',
   },
   {
+    id: 'treatment-recommendation',
     title: 'Treatment Recommendation Engine',
     description:
       'Collaborated with medical teams to create AI-powered treatment recommendation system with personalization and gamification.',
@@ -113,9 +117,12 @@ export const ProjectsSection = () => {
                 <Button
                   variant="ghost"
                   className="group/btn text-muted-foreground hover:text-primary p-0"
+                  asChild
                 >
-                  <span>View Details</span>
-                  <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                  <Link to={`/projects/${project.id}`}>
+                    <span>View Details</span>
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                  </Link>
                 </Button>
               </div>
 
